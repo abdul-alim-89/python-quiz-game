@@ -67,7 +67,7 @@ class QuizGame:
         print("Thankyou for Playing this small quiz game")
         print(f"You attempted {self.correct_question_count} questions correctly!")
         if self.incorrect_question_count > 0:
-            print(f"and {self.incorrect_question_count}")
+            print(f"and {self.incorrect_question_count} incorrectly!")
         print(f"Marks obtained: {round(self.score, 2)}")
 
 def main():
