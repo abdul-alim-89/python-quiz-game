@@ -27,7 +27,7 @@ class QuizGame:
     def next_question(self):
         """Generate and display the next question."""
         try:
-            print(self.display_questions)
+            #print(self.display_questions)
             if len(self.display_questions) == len(self.questions):
                 self.end_game()
                 return
@@ -54,7 +54,7 @@ class QuizGame:
         correct_ans = self.questions[self.current_question]["answer"]
         if ans.lower() == correct_ans:
             print("correct")
-            self.score += 10
+            self.score += 100 / len(self.questions)
             self.correct_question_count += 1
             self.next_question()
         else:
@@ -64,11 +64,11 @@ class QuizGame:
 
     def end_game(self):
         """End the game and display the final results."""
-        print("Thankyou for Playing this small quiz game\n")
+        print("Thankyou for Playing this small quiz game")
         print(f"You attempted {self.correct_question_count} questions correctly!")
         if self.incorrect_question_count > 0:
             print(f"and {self.incorrect_question_count}")
-            print(f"Marks obtained: {round(self.score, 2)}")
+        print(f"Marks obtained: {round(self.score, 2)}")
 
 def main():
     """Run the application."""
@@ -78,7 +78,7 @@ def main():
         game = QuizGame()
         game.start_game()
     else:
-        print("ok you can try sometime")
+        print("Okay, you can try sometime.")
 
 if __name__ == "__main__":
     main()
