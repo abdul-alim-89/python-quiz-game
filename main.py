@@ -1,8 +1,8 @@
 """Quiz game application."""
 class QuizGame:
-    "quiz game class"
+    "Quiz game class"
     def __init__(self):
-        """quiz game constructor"""
+        """Game initialize"""
         self.score = 0
         self.correct_question_count = 0
         self.incorrect_question_count = 0
@@ -36,7 +36,7 @@ class QuizGame:
             self.current_question = index
             self.display_questions.append(index)
             question = self.questions[index]["question"]
-            ans = input(f"Question {index + 1} : {question}")
+            ans = input(f"Question {index + 1}:{question}")
             user_answer = ans.strip()
             if user_answer:
                 self.check_answer(user_answer)
