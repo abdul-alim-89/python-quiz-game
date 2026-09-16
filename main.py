@@ -41,7 +41,7 @@ class QuizGame:
             if user_answer:
                 self.check_answer(user_answer)
             else:
-                print("Please type you answer")
+                print("Please type your answer")
                 again_ans = input()
                 user_again_answer = again_ans.strip()
                 self.check_answer(user_again_answer)
@@ -64,7 +64,7 @@ class QuizGame:
 
     def end_game(self):
         """End the game and display the final results."""
-        print("Thankyou for Playing this small quiz game")
+        print("Thank you for Playing this small quiz game")
         print(f"You attempted {self.correct_question_count} questions correctly!")
         if self.incorrect_question_count > 0:
             print(f"and {self.incorrect_question_count} incorrectly!")
